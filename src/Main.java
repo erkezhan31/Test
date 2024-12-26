@@ -1,15 +1,28 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+import ArtGallerySystem.Artwork;
+import ArtGallerySystem.Artist;
+import ArtGallerySystem.ArtGallery;
+import java.io.PrintStream;
+
+import static java.lang.System.*;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int painting = 0;
+        ArtGallerySystem.Artwork TheLastSupper  = new Artwork("The last Supper", "Louvre", painting);
+        ArtGallerySystem.Artwork Starrynight     = new Artwork("Starry night", "Louvre", painting);
+        Artist artist= new Artist ("Leonardo Da Vinci","1495");
+        ArtGallery artGallery= new ArtGallery("Louver", "Paris");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        ArtGallery.belongsArtwork(TheLastSupper);
+        ArtGallery.belongsArtwork(Starrynight);
+
+        boolean ArtGallery = false;
+        out.println(ArtGallery);
+        out.println("\nArtist" + artist.getName() + " \n" + "belongs" + Starrynight.getName());
+        Starrynight.belongs();
+        out.println(TheLastSupper );
+        out.println(Starrynight );
+
     }
 }
